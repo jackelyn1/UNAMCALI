@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sectionstyle.css">
+
+    <style>
+
+/* Título principal */
+.title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de la línea de tiempo */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Línea central */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #0077b6;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Contenedores de eventos */
+.event {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-in-out;
+}
+
+/* Estilos de los círculos */
+.circle {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #0077b6, #00aaff);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto hover en los círculos */
+.circle:hover {
+    transform: scale(1.1);
+}
+
+/* Ubicación de los círculos */
+.left .circle {
+    right: -35px;
+}
+
+.right .circle {
+    left: -35px;
+}
+
+/* Tarjetas de contenido */
+.content {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Efecto hover en el contenido */
+.content:hover {
+    transform: translateY(-5px);
+}
+
+/* Eventos alineados */
+.left {
+    left: 0;
+    text-align: right;
+    padding-right: 50px;
+}
+
+.right {
+    left: 50%;
+    text-align: left;
+    padding-left: 50px;
+}
+
+/* Animación de aparición */
+.event.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .timeline::after {
+        left: 20px;
+    }
+
+    .event {
+        width: 100%;
+        padding-left: 40px;
+        text-align: left;
+    }
+
+    .left .circle, .right .circle {
+        left: 10px;
+    }
+
+    .left, .right {
+        left: 0;
+        text-align: left;
+    }
+}
+
+    </style>
+</head>
+<body>
+        <!-- Contenedor donde se cargará el header -->
+        <div id="header-placeholder"></div>
+
+        <!-- Cargar el script del header -->
+        <script src="../js/header.js"></script>
+
+        <div class="timeline">
+
+            <div class="event left">
+                <div class="circle">2009</div>
+                <div class="content">
+                    <h3>Normativa Inicial</h3>
+                    <p>Se aprueba el Decreto Supremo N.º 023-2009-MINAM.</p>
+                </div>
+            </div>
+    
+            <div class="event right">
+                <div class="circle">2015</div>
+                <div class="content">
+                    <h3>Modificación ECA</h3>
+                    <p>MINAM actualiza los ECA para agua.</p>
+                </div>
+            </div>
+    
+            <div class="event left">
+                <div class="circle">2017</div>
+                <div class="content">
+                    <h3>Nueva Aprobación</h3>
+                    <p>Se aprueban nuevos estándares de calidad.</p>
+                </div>
+            </div>
+    
+            <div class="event right">
+                <div class="circle">2021</div>
+                <div class="content">
+                    <h3>Plan 2021-2023</h3>
+                    <p>MINAM aprueba el Plan de ECA y LMP.</p>
+                </div>
+            </div>
+    
+        </div>
+
+
+
+
+        <script src="../js/script.js"></script>
+
+    
+</body>
+</html>

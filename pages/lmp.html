@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        h1 {
+            font-size: 28px;
+            color: #1E3A8A;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p{
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .conta{
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+    <!-- Contenedor donde se cargará el header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Cargar el script del header -->
+    <script src="../js/header.js"></script>
+
+
+
+    <div class="conta">
+        <h1>Línea Normativa del LMP</h1>
+        <p>Es una medida que establece la concentración máxima de sustancias, elementos o parámetros físicos, químicos y biológicos.</p>
+
+
+    </div>
+
+    <div class="container">
+
+
+        <div class="card" style="background-image: url('../img/fondo.jpg');" onclick="openModal('https://cdn.www.gob.pe/uploads/document/file/4229707/Decreto%20Supremo%20021-2009.pdf.pdf?v=1678291432')">
+            <div class="overlay"></div>
+            <div class="card-content">
+                <h3>Decreto Supremo N° 021-2009-VIVIENDA </h3>
+                <p>Aprueba Valores Máximos Admisibles (VMA) de las descargas de aguas residuales no domésticas en el sistema de alcantarillado sanitario.</p>
+            </div>
+        </div>
+
+
+        <div class="card" style="background-image: url('../img/fondo.jpg');" onclick="openModal('https://www.minam.gob.pe/wp-content/uploads/2013/09/ds_002-2008-minam.pdf')">
+        
+            <div class="overlay"></div>
+            <div class="card-content">
+                <h3>Decreto Supremo N° 002-2008-MINAM</h3>
+                <p>Aplicables a los cuerpos de agua del territorio nacional y son obligatorios en el diseño de las normas legales y las políticas públicas siendo un referente obligatorio en el diseño y aplicación de todos los instrumentos de gestión ambiental.</p>
+            </div>
+    
+        </div>
+
+
+
+        <div class="card" style="background-image: url('../img/fondo.jpg');" onclick="openModal('https://www.minam.gob.pe/wp-content/uploads/2013/09/ds_003-2010-minam.pdf')">
+        
+            <div class="overlay"></div>
+            <div class="card-content">
+                <h3>Decreto Supremo N° 003-2010-MINAM</h3>
+                <p>Establece los límites máximos permisibles (LMP) para los efluentes de las Plantas de Tratamiento de Aguas Residuales (PTAR) domésticas o municipales. </p>
+            </div>
+    
+        </div>
+
+        <a href="https://busquedas.elperuano.pe/dispositivo/NL/1748339-3" class="card" style="background-image: url('../img/fondo.jpg');" target="_blank">
+            <div class="overlay"></div>
+            <div class="card-content">
+                <h3>Decreto Supremo N° 010-2019-MINAM</h3>
+                <p>Establece los Valores Máximos Admisibles (VMA) de las aguas residuales no domésticas en el Perú. Preservar la infraestructura sanitaria e incentiva el tratamiento de las aguas residuales.</p>
+            </div>
+        </a>
+
+        <div class="card" style="background-image: url('../img/fondo.jpg');" onclick="openModal('https://www.minam.gob.pe/wp-content/uploads/2017/06/DS-004-2017-MINAM.pdf')">
+        
+            <div class="overlay"></div>
+            <div class="card-content">
+                <h3>Decreto Supremo N° 004-2017-MINAM</h3>
+                <p>Compila las disposiciones de los Decretos Supremos N° 002-2008-MINAM, N° 023-2009-MINAM y N° 015-2015-MINAM</p>
+            </div>
+    
+        </div>
+
+
+    </div>
+
+    
+
+    <!-- MODAL PARA VISUALIZAR PDFs -->
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>Vista Previa del PDF</span>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <iframe id="pdfViewer" src=""></iframe>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

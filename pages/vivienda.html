@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        h1 {
+            font-size: 28px;
+            color: #1E3A8A;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p{
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .conta{
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <!-- Contenedor donde se cargará el header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Cargar el script del header -->
+    <script src="../js/header.js"></script>
+
+
+
+    <div class="conta">
+        <h1>Línea Normativa del MVCS</h1>
+        <p>El Ministerio de Vivienda, Construcción y Saneamiento (MVCS) es la entidad gubernamental peruana encargada de diseñar, promover y ejecutar políticas relacionadas con la vivienda, la construcción y el saneamiento, contribuyendo al desarrollo territorial sostenible del país.</p>
+    </div>
+
+    <div class="container">
+
+
+        <div class="card" style="background-image: url('../img/fondo.jpg');" onclick="openModal('https://docs.peru.justia.com/federales/decretos-leyes/25491-may-11-1992.pdf')">
+            <div class="overlay"></div>
+            <div class="card-content">
+                <h3>Decreto Ley N.º 25491</h3>
+                <p>Fusionan los Ministerios: Vivienda, Construcción y Transporte y Comunicaciones, denominándose en adelante, “Ministerio de Transporte, Comunicación, Vivienda y Construcción.</p>
+            </div>
+        </div>
+
+
+        <div class="card" style="background-image: url('../img/fondo.jpg');" onclick="openModal('https://www.minam.gob.pe/wp-content/uploads/2013/09/ds_002-2008-minam.pdf')">
+        
+            <div class="overlay"></div>
+            <div class="card-content">
+                <h3>Decreto Supremo N.º 010-2014-VIVIENDA</h3>
+                <p>Su objetivo es la de normar, articular y promover la provisión de servicios en vivienda, construcción, agua potable, saneamiento y desarrollo urbano.</p>
+            </div>
+    
+        </div>
+
+        <a href="https://www.gob.pe/institucion/vivienda/normas-legales/1833881-008-2021-vivienda" class="card" style="background-image: url('../img/fondo.jpg');" target="_blank">
+            <div class="overlay"></div>
+            <div class="card-content">
+                <h3>Decreto Supremo N.º 008-2021-VIVIENDA</h3>
+                <p>Se aprueba el Reglamento de la Ley N° 29151. Su objetivo es el de proponer y promover disposiciones legales sobre la adquisición, administración, custodia, defensa, recuperación, registro y supervisión de predios estatales.</p>
+            </div>
+        </a>
+
+
+
+
+        <a href="https://www.gob.pe/institucion/otass/normas-legales/6413611-001-2025-vivienda" class="card" style="background-image: url('../img/fondo.jpg');" target="_blank">
+            <div class="overlay"></div>
+            <div class="card-content">
+                <h3>Decreto Supremo N.º 001-2025-VIVIENDA</h3>
+                <p> Establece las normas que regulan la prestación de los servicios de agua potable y saneamiento en el Perú. Este decreto aprueba el Texto Único Ordenado del Decreto Legislativo N.º 1280.</p>
+            </div>
+        </a>
+
+
+
+
+        <a href="https://www.gob.pe/institucion/vivienda/normas-legales/6500516-056-2025-vivienda" class="card" style="background-image: url('../img/fondo.jpg');" target="_blank">
+            <div class="overlay"></div>
+            <div class="card-content">
+                <h3>Resolución Ministerial N.º 056-2025-VIVIENDA</h3>
+                <p>Aprobada para el otorgamiento de Bonos de Arrendamiento de Vivienda para Emergencias dirigida a igual número de potenciales beneficiarios constituidos por los damnificados con viviendas colapsadas o inhabitables, ante intensas precipitaciones pluviales,</p>
+            </div>
+        </a>
+
+    </div>
+
+
+
+
+
+    <!-- MODAL PARA VISUALIZAR PDFs -->
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>Vista Previa del PDF</span>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <iframe id="pdfViewer" src=""></iframe>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

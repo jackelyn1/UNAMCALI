@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+    background: white;
+    padding: 5px 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-img {
+    height: auto; /* Ajusta según el tamaño del navbar */
+    width: 15%;  /* Mantiene la proporción */
+
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Centra el navbar */
+    margin: 0 auto;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: blue;
+}
+
+/* Estilos para el icono de hamburguesa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+
+.nav-links li a.active {
+    background-color: #e0e0e0; /* Color de fondo para la página activa */
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+
+
+
+
+
+.normativas-a {
+    padding: 40px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.normativas-a h2 {
+    font-size: 28px;
+    color: #1E3A8A;
+    margin-bottom: 20px;
+}
+
+.normativa-bloque {
+    background: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.normativa-bloque h3 {
+    font-size: 22px;
+    color: #374151;
+    text-align: left;
+}
+
+.normativa-bloque ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+}
+
+.normativa-bloque ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.normativa-bloque ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #1E3A8A;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.imagen-normativa {
+    max-width: 100px;
+    height: auto;
+    margin-left: 20px;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 768px) {
+    .normativa-bloque {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagen-normativa {
+        margin: 20px auto 0;
+    }
+}
+
+/* ----------------- MODAL PARA VISUALIZAR PDF ----------------- */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.close {
+    cursor: pointer;
+    font-size: 22px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+
+
+
+/* ----------------- Estilos de vivienda-lmp ----------------- */
+
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.card {
+    width: 500px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.card-content {
+    position: relative;
+    z-index: 2;
+}
+.card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+.card p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+/* MEDIA QUERIES PARA RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .card {
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .conta {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .card {
+        width: 90%;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .conta {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .card {
+        width: 90%;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .card h3 {
+        font-size: 14px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+}
+

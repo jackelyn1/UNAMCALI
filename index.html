@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNAM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sectionstyle.css">
+</head>
+<body>
+
+    <!-- Contenedor donde se cargará el header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Cargar el script del header -->
+    <script src="js/header.js"></script>
+
+
+        
+    <section class="normativas">
+        <div class="contenido">
+            <h1>Normativas de Calidad del Agua en Perú: Una Línea de Tiempo</h1>
+            <p>La página fue creada con el objetivo de proporcionar una guía integral y accesible sobre las normativas y regulaciones que rigen la calidad del agua en el país.</p>
+            <p>La calidad del agua es un tema crucial para el bienestar de la población y el equilibrio de los ecosistemas. En Perú, el marco normativo que regula la calidad del agua es complejo y abarca diversas entidades y regulaciones. Desde los Estándares de Calidad Ambiental (ECA) establecidos por el Ministerio del Ambiente hasta las regulaciones sobre uso agrícola del agua por parte del Ministerio de Agricultura y Riego, cada normativa juega un papel vital en la gestión sostenible del recurso hídrico.</p>
+        </div>
+        <img src="img/mundo.png" alt="Mundo" class="imagen-mundo">
+    </section>
+    
+
+    <section class="normativas-a">
+        <h2>NORMATIVAS DE CALIDAD DEL AGUA</h2>
+        <p>En el Perú, existen diversas normativas que regulan y garantizan la calidad del agua para consumo humano, uso industrial, agrícola y la conservación de los cuerpos de agua. Algunas de las principales normativas incluyen:
+        </p>
+    
+        <div class="normativa-grid">
+            <!-- Tarjeta 1 -->
+            <div class="normativa-card" onclick="abrirModal('modal1')">
+                <img src="img/mundo.png" alt="Agua Potable">
+                <h3>Agua Potable</h3>
+            </div>
+    
+            <!-- Tarjeta 2 -->
+            <div class="normativa-card" onclick="abrirModal('modal2')">
+                <img src="img/mundo.png" alt="Aguas Residuales">
+                <h3>Aguas Residuales</h3>
+            </div>
+    
+            <!-- Tarjeta 3 -->
+            <div class="normativa-card" onclick="abrirModal('modal3')">
+                <img src="img/mundo.png" alt="Gestión Hídrica">
+                <h3>Gestión de Recursos Hídricos</h3>
+            </div>
+        </div>
+    
+        <!-- MODAL 1 - Agua Potable -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal('modal1')">&times;</span>
+                <h3>Normas para Agua Potable</h3>
+                <ul>
+                    <li><strong>Decreto Supremo N° 031-2010-SA:</strong> Valores máximos permisibles (VMP).</li>
+                    <li><strong>Ley N° 26338:</strong> Regula servicios de agua potable.</li>
+                    <li><strong>Decreto Supremo N° 021-2019-VIVIENDA:</strong> Reglamento de saneamiento.</li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- MODAL 2 - Aguas Residuales -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal('modal2')">&times;</span>
+                <h3>Normas para Aguas Residuales</h3>
+                <ul>
+                    <li><strong>Decreto Supremo N° 003-2010-MINAM:</strong> LMP para efluentes.</li>
+                    <li><strong>Decreto Supremo N° 002-2008-MINAM:</strong> Descargas industriales.</li>
+                    <li><strong>Decreto Supremo N° 015-2015-MINAM:</strong> Categorías ambientales.</li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- MODAL 3 - Gestión de Recursos Hídricos -->
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal('modal3')">&times;</span>
+                <h3>Normas sobre la Gestión de Recursos Hídricos</h3>
+                <ul>
+                    <li><strong>Ley N° 29338:</strong> Uso y conservación del agua.</li>
+                    <li><strong>Reglamento D.S. N° 001-2010-AG:</strong> Gestión sostenible.</li>
+                    <li><strong>Decreto Supremo N° 004-2017-MINAM:</strong> Parámetros de calidad.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+
+<section class="timeline">
+    <h2>Línea Normativa del ANA</h2>
+    <p>Es el ente rector y máxima autoridad técnico-normativa del Sistema Nacional de Gestión de los Recursos Hídricos en Perú.</p>
+
+    <div class="timeline-container">
+        <!-- Evento 1 -->
+        <div class="timeline-item">
+            <div class="timeline-year year-2008">2008</div>
+            <div class="timeline-content">
+                <h4>13 de Marzo</h4>
+                <p>Se crea la Autoridad Nacional del Agua (ANA) mediante el Decreto Legislativo N.º 997.</p>
+            </div>
+        </div>
+
+        <!-- Evento 2 -->
+        <div class="timeline-item">
+            <div class="timeline-year year-2009">2009</div>
+            <div class="timeline-content">
+                <h4>31 de Marzo</h4>
+                <p>Se promulga la Ley N.º 29338, Ley de Recursos Hídricos, para la gestión integrada y sostenible del agua en el país.</p>
+            </div>
+        </div>
+
+        <!-- Evento 3 -->
+        <div class="timeline-item">
+            <div class="timeline-year year-2010">2010</div>
+            <div class="timeline-content">
+                <h4>2 de Diciembre</h4>
+                <p>Se inicia el Proyecto de Modernización de la Gestión de los Recursos Hídricos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
