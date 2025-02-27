@@ -24,13 +24,15 @@ function setupMenu() {
 
 function highlightActiveLink() {
     const navLinks = document.querySelectorAll(".nav-links a");
-    const currentUrl = window.location.pathname.split("/").pop().toLowerCase(); // Obtiene solo el nombre del archivo
+    const currentUrl = window.location.href.toLowerCase(); // Obtiene la URL completa en minúsculas
 
     navLinks.forEach(link => {
-        const linkHref = link.getAttribute("href").split("/").pop().toLowerCase(); // Obtiene solo el nombre del archivo
+        const linkHref = link.href.toLowerCase(); // Obtiene la URL completa del enlace
 
-        if (linkHref === currentUrl) {
+        if (currentUrl === linkHref) {
             link.classList.add("active");
+        } else {
+            link.classList.remove("active"); // Asegura que no haya múltiples seleccionados
         }
     });
 }
