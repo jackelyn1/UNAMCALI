@@ -29,20 +29,3 @@ window.onclick = function(event) {
 };
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    const events = document.querySelectorAll(".event");
-
-    function checkVisibility() {
-        const triggerHeight = window.innerHeight * 0.8;
-
-        events.forEach(event => {
-            const eventTop = event.getBoundingClientRect().top;
-            if (eventTop < triggerHeight) {
-                event.classList.add("show");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", checkVisibility);
-    checkVisibility();
-});
