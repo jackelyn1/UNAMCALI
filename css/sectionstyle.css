@@ -203,20 +203,22 @@
 }
 
 .modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 12px;
     width: 90%;
-    max-width: 400px;
-    text-align: left;
+    max-width: 450px;
     text-align: center;
     position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-top: 5px solid #1E3A8A;
 }
 
 .modal-content h3 {
-    font-size: 22px;
+    font-size: 24px;
     color: #1E3A8A;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .modal-content ul {
@@ -225,16 +227,39 @@
 }
 
 .modal-content ul li {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 17px;
+    margin-bottom: 12px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-content ul li a {
+    color: #1E3A8A;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.modal-content ul li a:hover {
+    text-decoration: underline;
 }
 
 .modal-content .close {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 22px;
+    top: 12px;
+    right: 18px;
+    font-size: 24px;
     cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.modal-content .close:hover {
+    color: #1E3A8A;
 }
 
 /* Diseño Responsivo */
