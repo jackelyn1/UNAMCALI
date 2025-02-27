@@ -6,97 +6,112 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/sectionstyle.css">
+
+    <style>
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    flex-grow: 1; /* Empuja el footer hacia abajo si hay poco contenido */
+    padding: 20px;
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #0a5257;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links {
+        padding-top: 10px;
+    }
+}
+
+
+</style>
 </head>
 <body>
-        <!-- Contenedor donde se cargará el header -->
-        <div id="header-placeholder"></div>
+    <!-- Contenedor del header -->
+    <div id="header-placeholder"></div>
+    <script src="../js/header.js"></script>
 
-        <!-- Cargar el script del header -->
-        <script src="../js/header.js"></script>
-
-
-
+    <main>
         <section class="normativas">
             <div class="contenedor-texto">
                 <div class="contenido">
                     <h1>SOBRE NOSOTROS</h1>
-                    <p>Somos estudiantes del décimo ciclo de Ingeniería Ambiental en la Universidad Nacional de Moquegua. Esta página fue creada con el propósito de brindar un acceso claro y organizado a la normativa legal relacionada con la Gestión Hídrica en el Perú.
-
-                        Aquí podrás encontrar información esencial sobre leyes, regulaciones y decretos en vigor, cuyo objetivo es la preservación del medio ambiente y la protección de la salud pública.</p>
+                    <p>Somos estudiantes del décimo ciclo de Ingeniería Ambiental en la Universidad Nacional de Moquegua. Esta página fue creada con el propósito de brindar un acceso claro y organizado a la normativa legal relacionada con la Gestión Hídrica en el Perú. Aquí podrás encontrar información esencial sobre leyes, regulaciones y decretos en vigor, cuyo objetivo es la preservación del medio ambiente y la protección de la salud pública.</p>
                 </div>
             </div>
             <div class="contenedor-imagen">
                 <img src="../img/unam.jpg" alt="Mundo" class="imagen-mundo">
             </div>
         </section>
-        
+    </main>
 
+    <script src="../js/script.js"></script>
 
-
-
-        <script src="../js/script.js"></script>
-
-        <footer>
-            <div class="footer-container">
-                <p>&copy; 2025 Gestión Hídrica Perú. Todos los derechos reservados.</p>
-                <ul class="footer-links">
-                    <li><a href="#">Inicio</a></li>
-      
-                    <li><a href="pages/nosotros.html">Sobre nosotros</a></li>
-                </ul>
-            </div>
-        </footer>
-        
-        <style>
-
-
-                html, body {
-                    height: 100%;
-                    margin: 0;
-                    display: flex;
-                    flex-direction: column;
-                }
-
-                main {
-                    flex: 1; /* Empuja el footer hacia abajo */
-                }
-
-
-
-                footer {
-                    background-color: #0a5257;
-                    color: white;
-                    text-align: center;
-                    padding: 15px 0;
-                    width: 100%;
-                }
-        
-            .footer-container {
-                max-width: 1200px;
-                margin: auto;
-            }
-        
-            .footer-links {
-                list-style: none;
-                padding: 0;
-            }
-        
-            .footer-links li {
-                display: inline;
-                margin: 0 10px;
-            }
-        
-            .footer-links a {
-                color: #0ff175;
-                text-decoration: none;
-                font-weight: bold;
-            }
-        
-            .footer-links a:hover {
-                text-decoration: underline;
-            }
-        </style>
-        
-    
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Gestión Hídrica Perú. Todos los derechos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="pages/nosotros.html">Sobre nosotros</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
