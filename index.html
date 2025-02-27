@@ -8,6 +8,140 @@
     <link rel="stylesheet" href="css/sectionstyle.css">
     <link rel="icon" type="image/png" href="./img/logo.png">
 
+
+    <style>
+
+
+        footer {
+            background-color: #0a5257;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+    
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+    
+        .footer-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+    
+        .footer-links a {
+            color: #8d8fdd;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+
+        .equipo {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+    
+        .equipo .contenedor {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    
+        .equipo h2 {
+            text-align: center;
+            color: #0a5257;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+    
+        .equipo .descripcion {
+            text-align: center;
+            color: #555;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        .integrantes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+    
+        .integrante-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 30px 15px;
+        }
+    
+        .integrante-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+    
+        .integrante-inicial {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #0a5257, #8d8fdd);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+    
+        .integrante-inicial span {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+    
+        .integrante-card h3 {
+            color: #0a5257;
+            margin: 15px 0 5px;
+            font-size: 18px;
+        }
+    
+        .integrante-card .cargo {
+            color: #0a5257;
+            font-size: 14px;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+    
+        /* Responsive para dispositivos móviles */
+        @media (max-width: 768px) {
+            .integrantes-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .integrantes-grid {
+                grid-template-columns: 1fr;
+                max-width: 280px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+
 </head>
 <body>
 
@@ -97,6 +231,58 @@
             </div>
         </div>
     </section>
+
+
+
+    <!-- Sección de Equipo -->
+<section class="equipo">
+    <div class="contenedor">
+        <h2>NUESTRO EQUIPO</h2>
+        <p class="descripcion">Profesionales comprometidos con la gestión sostenible de los recursos hídricos en Perú.</p>
+        
+        <div class="integrantes-grid">
+            <div class="integrante-card">
+                <div class="integrante-inicial">
+                    <span>NH</span>
+                </div>
+                <h3>Nicol Herrera Lopez</h3>
+                <p class="cargo">Estudiante EPIAM</p>
+            </div>
+
+            <div class="integrante-card">
+                <div class="integrante-inicial">
+                    <span>SL</span>
+                </div>
+                <h3>Shiomy Lozada Aquipucho</h3>
+                <p class="cargo">Estudiante EPIAM</p>
+            </div>
+
+            <div class="integrante-card">
+                <div class="integrante-inicial">
+                    <span>SC</span>
+                </div>
+                <h3>Sarita Calderon Jimenez</h3>
+                <p class="cargo">Estudiante EPIAM</p>
+            </div>
+
+            <div class="integrante-card">
+                <div class="integrante-inicial">
+                    <span>PA</span>
+                </div>
+                <h3>Patricia Katherin Alvarez Florez</h3>
+                <p class="cargo">Estudiante EPIAM</p>
+            </div>
+
+            <div class="integrante-card">
+                <div class="integrante-inicial">
+                    <span>MV</span>
+                </div>
+                <h3>Milagros Valeriano Quenta</h3>
+                <p class="cargo">Estudiante EPIAM</p>
+            </div>
+        </div>
+    </div>
+</section>
     
     
 
@@ -112,43 +298,7 @@
         </div>
     </footer>
     
-    <style>
-        footer {
-            background-color: #0a5257;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    
-        .footer-container {
-            max-width: 1200px;
-            margin: auto;
-        }
-    
-        .footer-links {
-            list-style: none;
-            padding: 0;
-        }
-    
-        .footer-links li {
-            display: inline;
-            margin: 0 10px;
-        }
-    
-        .footer-links a {
-            color: #0ff175;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-    </style>
-    
+ 
 
 
 
