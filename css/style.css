@@ -95,7 +95,7 @@ header {
 
 
 .nav-links li a.active {
-    background-color: #e0e0e0; /* Color de fondo para la página activa */
+    background-color: rgb(180, 200, 230); /* Color de fondo para la página activa */
     border-radius: 5px;
     padding: 5px 10px;
 }
