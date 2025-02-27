@@ -1,12 +1,15 @@
+/* Estilos para la sección de normativas */
 .normativas {
     position: relative;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background: url('../img/fondo.jpg') no-repeat center center/cover;
-    padding: 50px;
+    padding: 40px 5%;
     min-height: 400px;
-    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .normativas::before {
@@ -20,82 +23,120 @@
     z-index: 0;
 }
 
-.contenido {
+/* Contenedor para el texto */
+.contenedor-texto {
     position: relative;
     z-index: 2;
-    max-width: 50%;
+    width: 50%;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.contenido {
+    background-color: rgba(0, 40, 80, 0.3);
+    border-radius: 10px;
+    padding: 20px;
     color: white;
 }
 
 .contenido h1 {
     font-size: 32px;
     font-weight: bold;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .contenido p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
+    margin-bottom: 15px;
 }
 
-.contenido p strong {
-    color: #FFD700; /* Color dorado */
+/* Contenedor para la imagen */
+.contenedor-imagen {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .imagen-mundo {
-    position: relative;
-    z-index: 2;
-    max-width: 100%; /* Ajusta al contenedor */
-    height: auto;
-    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
+    max-width: 500%;
+    height: 100;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5));
     transition: transform 0.3s ease-in-out;
 }
 
 .imagen-mundo:hover {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.05);
 }
 
-/* Responsivo */
-@media (max-width: 1024px) { /* Tablets */
+/* Media queries para responsividad */
+@media (max-width: 992px) {
+    .normativas {
+        padding: 30px 4%;
+    }
+    
+    .contenido h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .normativas {
+        flex-direction: column;
+        padding: 25px 3%;
+    }
+    
+    .contenedor-texto, 
+    .contenedor-imagen {
+        width: 100%;
+        padding-right: 0;
+    }
+    
+    .contenedor-texto {
+        margin-bottom: 30px;
+        order: 1;
+    }
+    
+    .contenedor-imagen {
+        order: 2;
+    }
+    
+    .imagen-mundo {
+        max-width: 70%;
+    }
+    
+    .contenido h1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .normativas {
+        padding: 20px 3%;
+        min-height: auto;
+    }
+    
+    .contenido {
+        padding: 15px;
+    }
+    
+    .contenido h1 {
+        font-size: 22px;
+    }
+    
+    .contenido p {
+        font-size: 14px;
+    }
+    
     .imagen-mundo {
         max-width: 80%;
     }
 }
-
-@media (max-width: 768px) { /* Dispositivos móviles */
-    .normativas {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .contenido {
-        max-width: 100%;
-        padding: 20px;
-    }
-
-    .contenido h1 {
-        font-size: 26px;
-    }
-
-    .contenido p {
-        font-size: 16px;
-    }
-
-    .imagen-mundo {
-        max-width: 60%; /* Ajustar la imagen para móviles */
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 480px) { /* Teléfonos más pequeños */
-    .imagen-mundo {
-        max-width: 90%;
-    }
-}
-
-
-
-
 .normativas-a {
     padding: 40px;
     background-color: #f4f4f4;
