@@ -64,8 +64,8 @@
 }
 
 .imagen-mundo {
-    max-width: 50%;
-    height: 50;
+    max-width: 80%;
+    height: 80;
     filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5));
     transition: transform 0.3s ease-in-out;
 }
