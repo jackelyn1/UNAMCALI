@@ -1,87 +1,172 @@
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+:root {
+    --primary-color: #003366;
+    --secondary-color: #0066CC;
+    --hover-color: #004D99;
+    --active-color: #E6F0FF;
+    --text-light: #FFFFFF;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Header Styles */
 header {
     width: 100%;
     background: white;
-    padding: 5px 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-
-.logo-img {
-    height: auto; /* Ajusta según el tamaño del navbar */
-    width: 15%;  /* Mantiene la proporción */
-
-}
-
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* Centra el navbar */
+    max-width: 1400px;
     margin: 0 auto;
-    position: relative;
-    z-index: 1000;
+}
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo a {
-    font-size: 20px;
-    font-weight: bold;
+    display: block;
     text-decoration: none;
-    color: black;
 }
 
+.logo-img {
+    width: auto;
+    height: 50px;
+    transition: var(--transition);
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 5px;
 }
 
 .nav-links li a {
     text-decoration: none;
-    color: black;
-    font-size: 16px;
-    transition: color 0.3s ease-in-out;
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
 }
 
 .nav-links li a:hover {
-    color: blue;
+    color: var(--secondary-color);
+    background-color: rgba(0, 102, 204, 0.05);
 }
 
-/* Estilos para el icono de hamburguesa */
+/* Important: Fixed active state styling */
+.nav-links li a.active {
+    background-color: rgb(180, 200, 230); /* Restored the original background color */
+    color: var(--primary-color);
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: 700;
+}
+
+/* Hamburger Menu for Mobile */
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    gap: 5px;
+    gap: 6px;
+    padding: 5px;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.hamburger:hover {
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .hamburger span {
     width: 30px;
-    height: 3px;
-    background: black;
-    border-radius: 5px;
+    height: 2px;
+    background: var(--primary-color);
+    border-radius: 2px;
+    transition: var(--transition);
 }
 
-/* Responsive */
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-links li a {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    /* Maintain active state padding in responsive view */
+    .nav-links li a.active {
+        padding: 8px 12px;
+    }
+}
+
 @media (max-width: 768px) {
+    .navbar {
+        padding: 0 10px;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
         background: white;
         position: absolute;
-        top: 60px;
+        top: 80px;
         left: 0;
         width: 100%;
-        padding: 15px 0;
+        padding: 10px 0;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
+        z-index: 999;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        text-align: left;
+        padding: 15px 20px;
+        border-radius: 0;
+    }
+
+    /* Mobile active state styling */
+    .nav-links li a.active {
+        background-color: rgb(180, 200, 230);
+        border-radius: 0;
+        padding: 15px 20px;
+        border-left: 3px solid var(--secondary-color);
+    }
+
+    .nav-links li a:hover {
+        border-left: 3px solid var(--secondary-color);
+        background-color: rgba(180, 200, 230, 0.3);
     }
 
     .nav-links.active {
@@ -91,18 +176,20 @@ header {
     .hamburger {
         display: flex;
     }
+    
+    /* Animation for hamburger menu */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
-
-
-.nav-links li a.active {
-    background-color: rgb(180, 200, 230); /* Color de fondo para la página activa */
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-
-
-
-
 
 
 .normativas-a {
